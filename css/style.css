@@ -143,6 +143,10 @@ header span{
     position: relative;
     padding: 13px 15px 10px 50px;
   }
+  .filtres button:hover{
+    opacity: .8;
+}
+
   .filtres p{
       font-size: 18px;
   }
@@ -184,6 +188,63 @@ header span{
     font-size: 15px;
     padding: 10px 15px 0;
 }
+/*-----------------------main----------------------*/
+
+main{
+    padding: 2%;
+}
+/*-----------------------Hebergement----------------------*/
+
+.hebergement{
+    display: flex;
+    flex-direction: row;
+    padding: 2%;
+    background-color: #F2F2F2;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 30px 2%;
+    border-radius: 20px;
+}
+
+.hebergement h2{
+    flex: 100%;
+    padding: 2% 0 0 2%;
+}
+
+.hebergement a{
+    flex: 100%;
+    color: black;
+    font-weight: bold;
+    padding: 2%;
+
+}
+.hebergement b{
+    font-weight: 600;
+    font-size: 18px;
+}
+.hebergement button{
+    width: 30%;
+    background: white;
+    border: solid 3px #FFF;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 5.5px 7.1px 21px -6px;
+}
+
+.hebergement button img{
+    object-fit: cover;
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0 0;
+}
+
+.hebergement div{
+    line-height: 30px;
+    padding: 3% 3% 0;
+    text-align: left;
+}
 
   /*------------------Media Queries------------------*/
 
@@ -220,7 +281,7 @@ header span{
     header h1{
     font-size: 22px;
     }
-    header h1, span,form{
+    header h1, header span,header form{
         padding: 0 20px 10px;
     }
     .search {
@@ -263,6 +324,12 @@ header span{
         top: 25%;
     }
     
+    .hebergement{
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .hebergement button{
+        width: 100%; ;
 }
 /*-----------------------Tablette----------------------*/
 
