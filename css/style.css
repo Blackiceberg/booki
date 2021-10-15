@@ -1,0 +1,297 @@
+/*---------------------HTML--------------------*/
+
+html {
+    box-sizing: border-box;
+    font-family: 'Raleway';
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+  }
+
+/*------------------Couleurs------------------*/
+
+.bleu{
+    color: #0065FC;
+}
+.gris{
+    color: #F2F2F2;
+}
+.txt-center{
+    text-align: center;
+}
+
+/*------------------HEADER------------------*/
+
+header{
+    display: flex;
+    flex-direction: column;
+    padding: 0 2.5%;
+}
+/*-------------------Nav-------------------*/
+
+.logo img{
+    width: 100px;
+}
+
+nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+nav ul li{
+    padding: 3% 2px;
+
+}
+nav ul li:nth-child(1){
+    flex: 70%;
+    padding: 0;
+    align-self: center;
+}
+nav ul li:nth-child(2){
+    flex:10%;
+    order: 2
+}
+nav ul li:nth-child(3){
+    flex:10%;
+    order: 3;
+}
+nav ul li:nth-child(3){
+    border-top: 3px solid rgba(255, 0, 0, .0)
+}
+nav ul li:nth-child(2), nav ul li:nth-child(3):hover{
+    border-top: solid 3px #0065FC;
+}
+
+.active a{
+    color: #0065FC;
+}
+nav ul li a{
+    color: black;
+}
+nav ul li a:hover{
+    color: #0065FC;
+}
+
+header h1{
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+header span{
+    font-weight: 200;
+}
+
+/*------------------Search------------------*/
+
+.search{
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0;
+    }  
+
+  .search label{
+    background: #F2F2F2;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 25% 0 0 25%;
+  }
+  
+  .search input {
+    font-weight: 700;
+    border: solid 1px #F2F2F2;
+    padding: 0px 10px 0;
+    font-size: 80%;
+  }
+  
+  .search button{
+    color: #FFF;
+    background-color: #0065FC;
+    border: none;
+    padding: 10px;
+    font-size: 80%;
+  }
+
+.search button{
+    border-radius: 0 16px 16px 0;
+}
+
+
+/*------------------Filtres------------------*/
+
+.filtres {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+  }
+
+.filtres h2{
+    font-size: 20px;
+  }
+
+  .filtres button {
+    border: solid 2px #d9d9d9;
+    border-radius: 32px;
+    font-size: 100%;
+    font-family: 'Raleway';
+    font-weight: bold;
+    background: white;
+    position: relative;
+    padding: 13px 15px 10px 50px;
+  }
+  .filtres p{
+      font-size: 18px;
+  }
+  .filtres i {
+    background-color: #DEEBFF;
+    color: #0065FC;
+    padding: 14.5px;
+    border-radius: 25px;
+    position: absolute;
+    left: -3px;
+    top: -2px;
+    width: 45px;
+  }
+
+/*------------------Info------------------*/
+
+  .info i {
+    border: solid 2px #F2F2F2;
+    border-radius: 100%;
+    font-size: 60%;
+    color: #0065FC;
+    padding: 0 0 0 24px;
+    position: relative;
+  
+  }
+  .fa-info:before {
+    content: "\f129";
+    position: absolute;
+    left: 10px;
+    top: 5px;
+  }
+  .info{
+    display: flex;
+    font-size: 20px;
+    padding: 30px 0;
+  }
+  .info p{
+    font-weight: 100;
+    font-size: 15px;
+    padding: 10px 15px 0;
+}
+
+  /*------------------Media Queries------------------*/
+
+
+/*-----------------------Mobile----------------------*/
+
+
+@media(max-width:767px){
+    header{
+        padding: 0;
+    }
+    nav{
+        margin: 0 0 20px 0;
+    }
+    nav ul li:nth-child(1){
+        flex: 100%;
+        text-align: center;
+        padding: 20px 0 30px 0;
+        
+    }
+    nav ul li:nth-child(2){
+        flex:50%;
+    }
+    nav ul li:nth-child(3){
+        flex:50%;
+        border-bottom: 3px solid rgba(255, 0, 0, .0);
+        border-top: none;
+    }
+
+    nav ul li:nth-child(2), nav ul li:nth-child(3):hover{
+    border-bottom: solid 3px #0065FC;
+    border-top: none;
+    }
+    header h1{
+    font-size: 22px;
+    }
+    header h1, span,form{
+        padding: 0 20px 10px;
+    }
+    .search {
+        justify-content: space-around;
+        gap: 0;
+        padding: 30px 10% 0 5%;
+    }
+    .search input{
+    width: 100%;
+    }
+    .search button{
+        border-radius: 25%;
+        margin: 0 -10px;
+        width: 50px;
+    }
+
+    .filtres {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 5%;
+    }
+
+    .filtres h2 {
+        width: 100%;
+    }
+    .info {
+        padding: 0 0 0 5%;
+        align-items: center;
+    }
+    .info i {
+        padding: 12px;
+        font-size: 45%;
+
+    }
+    .fa-info:before {
+        left: 45%;
+        top: 25%;
+    }
+    
+}
+/*-----------------------Tablette----------------------*/
+
+@media(min-width:768px){
+
+    .info i {
+        padding: 1.4%;
+    }
+    .fa-search::before {
+        content: 'Recherche'!important;
+        font-family: 'Raleway';
+    }
+}
+
+
+/*-----------------------Desktop----------------------*/
+
+
+@media(min-width:992px){
+
+      .info i {
+        padding: 0 0 0 24px;
+    }
+}
+
+
+
+
+
+  
+  
+  
