@@ -192,18 +192,71 @@ header span{
 
 main{
     padding: 2%;
+    display: flex;
+    justify-content: space-between;
 }
 /*-----------------------Hebergement----------------------*/
-
-.hebergement{
+.encart button span:nth-child(2) {
+    padding: 5% 5% 0%;
+    display: flex;
+    flex-direction: column;
+}
+.encart button span:nth-child(2).starz{
     display: flex;
     flex-direction: row;
+    padding: 10px 0;
+}
+
+.encart{
+    display: flex;
     padding: 2%;
-    background-color: #F2F2F2;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    gap: 30px 2%;
     border-radius: 20px;
+}
+.encart button{
+    background: white;
+    border: solid 1px #FFF;
+    display: flex;
+    padding: 5px;
+    box-shadow: rgba(0, 0, 0, 0.2) 5.5px 7.1px 21px -6px;
+    height: fit-content;
+    border-radius: 20px;
+    width: 100%;
+
+}
+.encart button img{
+    object-fit: cover;
+    height: 110px;
+}
+
+.hebergement{
+    flex-direction: row;
+    background-color: #F2F2F2;
+    gap: 30px 4%;
+    border-radius: 20px;
+    width: 67%;
+    justify-content: center;
+}
+
+.populaires{
+    width: 30%;
+    background-color: #F2F2F2;
+    flex-direction: row;
+}
+
+.populaires button img{
+    border-radius: 15px 0 0 15px;
+    width: 40%;
+    height: 145px;
+}
+
+.hebergement button img{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+.hebergement button{
+    flex-direction: column;
+    width: 30%;
 }
 
 .hebergement h2{
@@ -211,6 +264,29 @@ main{
     padding: 2% 0 0 2%;
 }
 
+.populaires h2{
+    width: 92%;
+    padding: 5% 1% 8%;
+}
+.m_btm {
+    margin-bottom: 10%;
+}
+
+.populaires i{
+    font-size: 25px;
+    align-self: center;
+    margin-top: -7px;
+}
+.populaires button span i{ 
+    font-size: 90%;
+}
+
+.encart_description {
+    display: flex;
+    flex-direction: column;
+    height: 145px;
+    gap: 30%;
+}
 .hebergement a{
     flex: 100%;
     color: black;
@@ -220,31 +296,15 @@ main{
 }
 .hebergement b{
     font-weight: 600;
-    font-size: 18px;
-}
-.hebergement button{
-    width: 30%;
-    background: white;
-    border: solid 3px #FFF;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    padding: 5px;
-    box-shadow: rgba(0, 0, 0, 0.2) 5.5px 7.1px 21px -6px;
 }
 
-.hebergement button img{
-    object-fit: cover;
-    width: 100%;
-    height: 150px;
-    border-radius: 10px 10px 0 0;
-}
-
-.hebergement div{
-    line-height: 30px;
-    padding: 3% 3% 0;
+.encart span{
+    line-height: 20px;
     text-align: left;
+    font-size: 95%;
 }
+
+
 
   /*------------------Media Queries------------------*/
 
@@ -323,13 +383,28 @@ main{
         left: 45%;
         top: 25%;
     }
-    
+    main{
+        flex-direction: column;
+        padding: 0;
+    }
     .hebergement{
         flex-direction: column;
         background-color: rgba(0, 0, 0, 0);
+        width: 100%;
+        order: 2;
     }
-    .hebergement button{
-        width: 100%; ;
+    .populaires {
+        width: 100%;
+        order: 1;
+        border-radius: 0;
+
+    }
+    .encart button{
+        width: 100%;
+    }
+    .populaires button{
+        margin: 10px;
+    }
 }
 /*-----------------------Tablette----------------------*/
 
