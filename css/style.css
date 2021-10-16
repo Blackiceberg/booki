@@ -205,7 +205,8 @@ main{
 .encart button span:nth-child(2).starz{
     display: flex;
     flex-direction: row;
-    padding: 10px 0;
+    padding: 10px 0 0;
+    gap: 2px;
 }
 
 .encart{
@@ -260,7 +261,12 @@ main{
     width: 30%;
 }
 
-.hebergement h2, .activites h2{
+.activites h2{
+    flex: 100%;
+    padding: 5% 0 2%;
+}
+
+.hebergement h2{
     flex: 100%;
     padding: 2% 0 0 2%;
 }
@@ -268,6 +274,7 @@ main{
 .populaires h2{
     width: 92%;
     padding: 5% 1% 8%;
+    flex: 70%;
 }
 .m_btm {
     margin-bottom: 10%;
@@ -300,7 +307,6 @@ main{
 }
 
 .encart span{
-    line-height: 20px;
     text-align: left;
     font-size: 95%;
 }
@@ -351,7 +357,35 @@ main{
     flex-wrap: wrap;
     justify-content: space-between;
 }
+/*-----------------------Footer----------------------*/
 
+
+footer{
+    background-color: #F2F2F2;
+    display: flex;
+    flex-direction: row;
+    gap: 25%;
+    line-height: 2em;
+    align-content: flex-start;
+    padding: 2em;
+  }
+  
+  footer ul li{
+    list-style: none;
+  }
+  
+  footer a {
+    color: black;
+    font-weight: 300;
+    font-size: 1em;
+    line-height: 2;
+  
+  }
+  footer h1,h2,h3 {
+    font-size: 1.3em;
+    padding: 0 0 1em;
+  }
+  
   /*------------------Media Queries------------------*/
 
 
@@ -425,6 +459,10 @@ main{
         font-size: 45%;
 
     }
+    .info p {
+        padding: 30px;
+    }
+
     .fa-info:before {
         left: 45%;
         top: 25%;
@@ -451,6 +489,26 @@ main{
     .populaires button{
         margin: 10px;
     }
+    .activites{
+        flex-direction: row;
+        order: 3;
+        gap: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        justify-content: space-around;
+    }
+    .activites div{
+        width: 100%;
+        gap: 25px;
+    }
+    .activites .VieuxPort img,.activites .FortPomegues img,.activites .IlesduFrioul img,.activites .ParcNationaldesCalanques img,.activites .Notre-Damme-de-la-Garde img,.activites .ParcLongchamp img{
+        height: 159px;
+        padding: 2%;
+    }
+    footer{
+        flex-direction: column;
+    }
 }
 /*-----------------------Tablette----------------------*/
 
@@ -463,6 +521,42 @@ main{
         content: 'Recherche'!important;
         font-family: 'Raleway';
     }
+}
+
+/*-----------------------Desktop----------------------*/
+
+
+@media(max-width:992px){
+
+main{
+flex-direction: column;
+gap: 20px;
+  }
+  .hebergement{
+      width: 100%;
+  }
+  .populaires{
+      width: 100%;
+      padding: 3%;
+      font-size: 20px;
+  }
+  .m_btm{
+    margin-bottom: 15px;
+}
+
+.populaires span {
+    line-height: 30px;
+}
+.encart_description{
+    gap: 2px;
+}
+
+.populaires button span:nth-child(2) {
+    padding: 2% 3% 0%;
+    display: flex;
+    flex-direction: column;
+}
+
 }
 
 
