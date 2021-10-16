@@ -194,6 +194,7 @@ main{
     padding: 2%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 /*-----------------------Hebergement----------------------*/
 .encart button span:nth-child(2) {
@@ -212,6 +213,8 @@ main{
     padding: 2%;
     flex-wrap: wrap;
     border-radius: 20px;
+    flex-direction: row;
+
 }
 .encart button{
     background: white;
@@ -230,7 +233,6 @@ main{
 }
 
 .hebergement{
-    flex-direction: row;
     background-color: #F2F2F2;
     gap: 30px 4%;
     border-radius: 20px;
@@ -241,7 +243,6 @@ main{
 .populaires{
     width: 30%;
     background-color: #F2F2F2;
-    flex-direction: row;
 }
 
 .populaires button img{
@@ -259,7 +260,7 @@ main{
     width: 30%;
 }
 
-.hebergement h2{
+.hebergement h2, .activites h2{
     flex: 100%;
     padding: 2% 0 0 2%;
 }
@@ -294,7 +295,7 @@ main{
     padding: 2%;
 
 }
-.hebergement b{
+.encart b{
     font-weight: 600;
 }
 
@@ -303,8 +304,53 @@ main{
     text-align: left;
     font-size: 95%;
 }
+.activites button span:nth-child(2) {
+    padding: 5%;
+}
+.activites{
+    width: 100%;
+    background: none;
+    padding: 0;
+    justify-content: space-between;
+}
 
+.activites button{
+    border: none;
+    padding: 0;
+    width: 22vw;
+    flex-direction: column;   
+}
 
+.activites button img{
+    border-radius: 15px 15px 0 0;
+    width: 100%;
+
+}
+.activites .VieuxPort img{
+    height: 396px;
+}
+.activites .FortPomegues img{
+    height: 187px;
+}
+.activites .IlesduFrioul img{
+    height: 115.5px;
+}
+.activites .ParcNationaldesCalanques img{
+    height: 396px;
+}
+.activites .Notre-Damme-de-la-Garde img{
+    height: 146px;
+}
+.activites .ParcLongchamp img{
+    height: 159px;
+}
+
+.activites div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
   /*------------------Media Queries------------------*/
 
