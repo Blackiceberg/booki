@@ -228,6 +228,12 @@ main{
     width: 100%;
 
 }
+.encart button:hover{
+    opacity: .9;
+    box-shadow: rgba(0, 0, 0, 0.5) 5.5px 7.1px 21px -6px;
+
+}
+
 .encart button img{
     object-fit: cover;
     height: 110px;
@@ -410,7 +416,7 @@ footer{
     }
     nav ul li:nth-child(3){
         flex:50%;
-        border-bottom: 3px solid rgba(255, 0, 0, .0);
+        border-bottom: 3px solid #F2F2F2;
         border-top: none;
     }
 
@@ -486,6 +492,7 @@ footer{
     .encart button{
         width: 100%;
     }
+
     .populaires button{
         margin: 10px;
     }
